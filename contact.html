@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Jacob Heileson" content="Portfolio">
+    <title>Jacob Heileson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<h1>Contact Me</h1>
+
+<div class="contact-container">
+    <p>If you'd like to get in touch, please fill out the form below. I’d be happy to connect!</p>
+
+    <form class="contact-form" onsubmit="return submitMessage()">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <button type="submit">Send</button>
+            <script>
+            function submitMessage() {
+                alert("Your message has been received! Thank you for reaching out!");
+                return false;
+            }
+            </script>
+    </form>
+</div>
+
+
+<footer class="footer">
+    <p>Jacob Heileson</p>
+    <p>
+        <a href="https://github.com/JacobHeileson" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/jacob-heileson" target="_blank">LinkedIn</a> |
+        <a href="mailto:jacobheileson@gmail.com">Email</a>
+    </p>
+    <p>© 2025 Jacob Heileson</p>
+</footer>
+
+</body>

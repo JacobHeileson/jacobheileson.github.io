@@ -1,0 +1,272 @@
+body {
+    background: #1B263B;
+}
+
+h1 {
+    font-family: monospace;
+    font-size: 48px;
+    color: rgb(224, 161, 6);
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+nav {
+    background-color: #1B263B;
+    padding: 10px 0;
+    outline: 2px solid black;
+    outline-offset: 5px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 24px;      
+  font-family: monospace;
+}
+
+nav a:hover {
+    color: #E0A106;
+}
+
+nav ul {
+    font-family: monospace;
+    font-size: 24px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1B263B;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-family: monospace;
+    font-size: 64px;
+    color: #E0A106;
+    margin: 0;
+}
+
+
+.hero .subtitle {
+    font-size: 24px;
+    color: #F5F5F5;
+    margin-top: 10px;
+}
+.intro {
+    font-family: monospace;
+    font-size: 20px;
+    color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+footer {
+    background-color: #1B263B;
+    color: #F5F5F5;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+    font-family: monospace;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+footer a:hover {
+    color: #E0A106;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.about-me {
+    font-family: monospace;
+    font-size: 20px;
+    color:#E0A106 ;
+    justify-content: center;
+    width: 60%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+}
+.programming-languages {
+    font-family: monospace;
+    font-size: 20px;
+    color:#E0A106 ;
+    width: 20%;
+    margin: 15px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.technologies-tools {
+    font-family: monospace;
+    font-size: 20px;
+    color:#E0A106 ;
+    width: 20%;
+    margin: 15px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.soft-skills {
+    font-family: monospace;
+    font-size: 20px;
+    color:#E0A106 ;
+    width: 20%;
+    margin: 15px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.projects-container {
+    font-family: monospace;
+    font-size: 20px;
+    color:#E0A106 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    text-align: center;
+    width: 80%;
+}
+
+.project-card {
+    background-color: #283747;
+    border: 2px solid #E0A106;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.project-card a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.project-card a:hover {
+    color: #E0A106;
+}
+
+/* Contact Page Container */
+.contact-container {
+    width: 60%;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: monospace;
+    color: #E0A106;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+
+.contact-form label {
+    color: #E0A106;
+    font-size: 18px;
+    font-family: monospace;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 80%;
+    background-color: #1B263B;
+    border: 2px solid #E0A106;
+    color: #F5F5F5;
+    padding: 10px;
+    font-size: 16px;
+    font-family: monospace;
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ffcc33;
+    box-shadow: 0 0 5px #ffcc33;
+}
+
+.contact-form button {
+    background-color: #E0A106;
+    color: #1B263B;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-family: monospace;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: #ffcc33;
+}
+
+/* 404 Page Styles */
+.error-title {
+    font-size: 80px;
+    color: #E0A106;
+    text-align: center;
+    margin-top: 40px;
+    font-family: monospace;
+}
+
+.error-container {
+    text-align: center;
+    margin-top: 20px;
+    font-family: monospace;
+    color: #F5F5F5;
+}
+
+.error-container a {
+    color: #E0A106;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.error-container a:hover {
+    text-decoration: underline;
+}
+
