@@ -25,27 +25,64 @@
 <h1>Contact Me</h1>
 
 <div class="contact-container">
-    <p>If you'd like to get in touch, please fill out the form below. I’d be happy to connect!</p>
+  <p>If you'd like to get in touch, please fill out the form below. I’d be happy to connect!</p>
 
-    <form class="contact-form" onsubmit="return submitMessage()">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+  <form
+    id="contact-form"
+    class="contact-form"
+    action="https://formspree.io/f/mvzgkkpy"
+    method="POST"
+  >
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
 
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-        <button type="submit">Send</button>
-            <script>
-            function submitMessage() {
-                alert("Your message has been received! Thank you for reaching out!");
-                return false;
-            }
-            </script>
-    </form>
+    <button type="submit">Send</button>
+  </form>
+
+  <p id="form-status" style="display:none; margin-top: 1rem;"></p>
 </div>
+
+<script>
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+
+      if (response.ok) {
+        status.textContent =
+          "✅ Your message has been received! Thank you for reaching out.";
+        status.style.display = "block";
+        form.reset();
+      } else {
+        status.textContent =
+          "❌ Something went wrong. Please try again later.";
+        status.style.display = "block";
+      }
+    } catch (error) {
+      status.textContent =
+        "❌ Network error. Please try again later.";
+      status.style.display = "block";
+    }
+  });
+</script>
 
 
 <footer class="footer">
@@ -57,5 +94,6 @@
     </p>
     <p>© 2025 Jacob Heileson</p>
 </footer>
+
 
 </body>
